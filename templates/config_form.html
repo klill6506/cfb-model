@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Configuration</title>
+</head>
+<body>
+    <h1>Set Your Model Parameters</h1>
+    <form action="/save_config" method="post">
+        <label>Weight for this year vs last year (1-10):</label><br>
+        <input type="number" name="weight_this_vs_last" min="1" max="10"><br><br>
+
+        <label>Points to underdog for rivalry games:</label><br>
+        <input type="number" name="rivalry_pts"><br><br>
+
+        <label>Home field advantage (points):</label><br>
+        <input type="number" name="home_field_pts"><br><br>
+
+        <label>Travel fatigue factor (points):</label><br>
+        <input type="number" name="travel_fatigue_pts"><br><br>
+
+        <label>Bye-week factor (points):</label><br>
+        <input type="number" name="bye_week_pts"><br><br>
+
+        <label>Look-ahead factor (points):</label><br>
+        <input type="number" name="look_ahead_pts"><br><br>
+
+        <input type="submit" value="Save Configuration">
+    </form>
+</body>
+</html>
