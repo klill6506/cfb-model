@@ -6,3 +6,4 @@ PyYAML==6.0.2
 python-dotenv==1.0.1
 numpy==2.2,<3
 jinja2
+python-multipart
