@@ -1,23 +1,32 @@
+<!-- templates/config.html -->
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Configure Your Model</title>
-  </head>
-  <body>
-    <h1>Configure Model Parameters</h1>
-    <form method="post" action="/config">
-      <label>1. Weight for this year's games vs last year</label>
-      <input type="number" name="weight_years" required><br>
-      <label>2. Points to the underdog for rivalry games</label>
-      <input type="number" name="rivalry_factor" required><br>
-      <label>3. Home field advantage</label>
-      <input type="number" name="home_field" required><br>
-      <label>4. Travel fatigue factor</label>
-      <input type="number" name="travel_factor" required><br>
-      <label>5. Bye-week factor</label>
-      <input type="number" name="bye_week" required><br>
-      <label>6. Look ahead factor</label>
-      <input type="number" name="look_ahead" required><br>
-      <button type="submit">Submit</button>
+<head>
+    <title>Model Configuration</title>
+</head>
+<body>
+    <h1>Set Your Model Configuration</h1>
+    <form action="/config" method="post">
+        <label>Weight This Year vs Last Year:</label><br>
+        <input type="number" name="weight" step="0.1" required><br><br>
+
+        <label>Rivalry Bonus (Points):</label><br>
+        <input type="number" name="rivalry_bonus" step="0.1" required><br><br>
+
+        <label>Home Field Advantage (Points):</label><br>
+        <input type="number" name="home_field" step="0.1" required><br><br>
+
+        <label>Travel Fatigue Factor:</label><br>
+        <input type="number" name="travel_fatigue" step="0.1" required><br><br>
+
+        <label>Bye Week Factor:</label><br>
+        <input type="number" name="bye_week" step="0.1" required><br><br>
+
+        <label>Lookahead Factor:</label><br>
+        <input type="number" name="lookahead" step="0.1" required><br><br>
+
+        <input type="submit" value="Save Configuration">
     </form>
-  </body>
+</body>
 </html>
+
