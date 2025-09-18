@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CFB Game Model</title>
+</head>
+<body>
+    <h1>Card of the Week - CFB Model</h1>
+    <table border=1>
+        <th><td>Game</td><td>Vegas Line</td><td>Model Line</td></th>
+        &{{ for game in games }}
+        <tr style="color: {if game.diff_fg > 5.9: 'yellow'; else: 'white' }">
+            <td>{{ game.game_name }}</td>
+            <td>{{ game.vegas_line }}</td>
+            <td>{{ game.model_line }}</td>
+        </tr>
+        {{ end}}
+    </table>
+</body>
+</html>
