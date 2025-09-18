@@ -198,3 +198,7 @@ async def post_config(
         "lookahead": lookahead
     }
     return templates.TemplateResponse("result.html", {"request": request, "config": config_store})
+
+# after endpoints
+print("Routes:", [route.path for route in app.routes])
+
