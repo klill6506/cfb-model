@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Configure Your Model</title>
+  </head>
+  <body>
+    <h1>Configure Model Parameters</h1>
+    <form method="post" action="/config">
+      <label>1. Weight for this year's games vs last year</label>
+      <input type="number" name="weight_years" required><br>
+      <label>2. Points to the underdog for rivalry games</label>
+      <input type="number" name="rivalry_factor" required><br>
+      <label>3. Home field advantage</label>
+      <input type="number" name="home_field" required><br>
+      <label>4. Travel fatigue factor</label>
+      <input type="number" name="travel_factor" required><br>
+      <label>5. Bye-week factor</label>
+      <input type="number" name="bye_week" required><br>
+      <label>6. Look ahead factor</label>
+      <input type="number" name="look_ahead" required><br>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
