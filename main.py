@@ -174,6 +174,10 @@ config_store = {}
 async def get_config(request: Request):
     return templates.TemplateResponse("config.html", {"request": request})
 
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
 @app.post("/config", response_class=HTMLResponse)
 async def post_config(
     request: Request,
